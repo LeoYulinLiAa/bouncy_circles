@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <title>Bouncy Circles</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+      margin: 0;
+    }
+    .main {
+      max-width: 768px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-flow: column;
+      padding: 1rem;
+    }
+    .main h1 {
+      font-weight: 300;
+    }
+    #main-canvas {
+      width: 100%;
+    }
+    #app-container {
+      display: flex;
+      flex-flow: column;
+    }
+    #app-container button {
+      border-radius: 0.2rem;
+      background: #5396e3;
+      color: white;
+      border: none;
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+    }
+    #app-container button:hover {
+      background: #3e70aa;
+    }
+    #app-container button:active {
+      background: #5980ac;
+    }
+  </style>
+</head>
+<body>
+<div class="main">
+  <h1>Bouncy Circles</h1>
+  <div id="app-container"></div>
+</div>
+<script src="./bundle.js"></script>
+</body>
+</html>
