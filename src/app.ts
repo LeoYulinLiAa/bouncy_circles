@@ -1,8 +1,8 @@
-import { Circle } from './circle';
+import Circle from './circle';
 import throttle from 'lodash.throttle';
 import randomColor from 'randomcolor';
 
-export class App {
+export default class App {
 
   private canvas = document.createElement("canvas");
   private circles: Circle[] = [];

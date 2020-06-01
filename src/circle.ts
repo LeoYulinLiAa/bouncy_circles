@@ -1,4 +1,4 @@
-export class Circle {
+export default class Circle {
 
   readonly radius: number;
   readonly color: string;
