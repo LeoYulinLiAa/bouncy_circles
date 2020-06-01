@@ -50,12 +50,14 @@ class App {
 
     const appContainer = document.getElementById("app-container")!;
 
-    const dpr =  window.devicePixelRatio;
+    const dpr = window.devicePixelRatio;
     const { width, height } = this.dimension;
     this.canvas.width = width * dpr;
     this.canvas.height = height * dpr;
     this.canvas.id = "main-canvas";
     this.context.scale(dpr, dpr);
+    this.canvas.tabIndex = 1;
+    this.canvas.autofocus = true;
     appContainer.appendChild(this.canvas);
 
     const addCircleButton = document.createElement("button");
@@ -79,7 +81,7 @@ class App {
 
     const throttledHandler = throttle(handler, 50);
 
-    addEventListener("keydown", throttledHandler);
+    this.canvas.addEventListener("keydown", throttledHandler);
   }
 
   public addCircle() {
@@ -105,7 +107,7 @@ class App {
   private updateCircle = function (this: { width: number, height: number }, circle: Circle) {
     const { location: { x, y }, radius } = circle;
     const { width, height } = this;
-    if (x + radius >= width || x - radius <= 0 ) circle.bounceX();
+    if (x + radius >= width || x - radius <= 0) circle.bounceX();
     if (y + radius >= height || y - radius <= 0) circle.bounceY();
     circle.update();
   }.bind(this.dimension);
@@ -121,10 +123,6 @@ class App {
 
 }
 
-const app = new App();
-
 document.addEventListener('DOMContentLoaded', function () {
-  app.render();
+  new App().render();
 });
-
-export { app };

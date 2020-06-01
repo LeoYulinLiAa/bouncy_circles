@@ -6,8 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333333;
       margin: 0;
+    }
+    a {
+      color: #333333;
+      text-decoration: underline;
+    }
+    a:active {
+      color: #666666;
+      text-decoration: underline;
     }
     .main {
       max-width: 768px;
@@ -22,8 +31,14 @@
     .main h1 {
       font-weight: 300;
     }
+    .main small {
+      color: #666666;
+    }
     #main-canvas {
       width: 100%;
+    }
+    #main-canvas:focus {
+      outline: none;
     }
     #app-container {
       display: flex;
@@ -48,6 +63,9 @@
 <body>
 <div class="main">
   <h1>Bouncy Circles</h1>
+  <p>Just a little demo where I tried to use canvas and webpack :P</p>
+  <small>Hint: Click on the canvas to use <kbd>Space</kbd> or <kbd>Backspace</kbd> to add or remove circles!</small>
+  <p><a href="https://github.com/LeoYulinLiAa/bouncy_circles">Source</a></p>
   <div id="app-container"></div>
 </div>
 <script src="./bundle.js"></script>
