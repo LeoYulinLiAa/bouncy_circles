@@ -41,18 +41,16 @@ export class App {
       }
     };
 
-    const throttledHandler = throttle(handler, 50);
-
-    this.canvas.addEventListener("keydown", throttledHandler);
+    this.canvas.addEventListener("keydown", handler);
   }
 
-  public addCircle() {
+  private addCircle = throttle(() => {
     this.circles.push(new Circle(Math.random() * 10 + 10, randomColor()));
-  }
+  }, 50);
 
-  public removeCircle() {
+  private removeCircle = throttle(() => {
     this.circles.pop();
-  }
+  }, 50);
 
   private get context() {
     return this.canvas.getContext("2d")!
