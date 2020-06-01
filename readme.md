@@ -3,7 +3,7 @@ Just a little demo where I tried to use canvas and webpack :P
 
 ## Live Demo
 
-![](https://github.com/LeoYulinLiAa/bouncy_circles/workflows/Deploy%20to%20Github%20Pages/badge.svg)
+[![](https://github.com/LeoYulinLiAa/bouncy_circles/workflows/Deploy%20to%20Github%20Pages/badge.svg)](https://leoyulinliaa.github.io/bouncy_circles)
 
 https://leoyulinliaa.github.io/bouncy_circles
 
